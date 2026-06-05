@@ -333,7 +333,7 @@ PY
 
 	mkdir -p ./wheels
 	echo "Downloading wheels to ./wheels/..."
-	${PIP_CMD} download ${PIP_PLATFORM} --prefer-binary -r requirements.txt -d ./wheels
+	${PIP_CMD} download ${PIP_PLATFORM} --prefer-binary --only-binary=:all: -r requirements.txt -d ./wheels
 	if [[ $? -ne 0 ]]; then
 		echo "✗ Error: Failed to download dependencies"
 		exit 1
