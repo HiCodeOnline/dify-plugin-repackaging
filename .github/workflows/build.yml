@@ -49,11 +49,6 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Upgrade pip And Clear Cache
-        run: |
-          python -m pip install --upgrade pip
-          pip cache purge
-
       - name: Make plugin_repackaging.sh executable
         run: chmod +x ./plugin_repackaging.sh
 
